@@ -33,3 +33,11 @@ document.getElementById('change-theme-btn').addEventListener('click', function()
         });
     }
 });
+
+function openProject(projectId) {
+    window.open(`${projectId}.html`, '_blank');
+}
+
+particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('particles.json loaded...');
+});
