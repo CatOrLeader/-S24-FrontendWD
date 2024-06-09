@@ -5,7 +5,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     transition: background-color 0.3s ease, color 0.3s ease;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 header {
