@@ -130,3 +130,75 @@ header button:hover {
     z-index: 1;
     pointer-events: none; /* Allow interaction with underlying content */
 }
+
+.xkcd-comic-btn {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.xkcd-comic-btn button {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #007BFF, #00FF7F);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.xkcd-comic-btn button:hover {
+    background: linear-gradient(45deg, #0056b3, #007b55);
+    transform: scale(1.05);
+}
+
+#comic-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#comic-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #FF6347;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#comic-content button:hover {
+    background: #FF4500;
+}
+
+#comic-container {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme #comic-container {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-theme #comic-content button {
+    background: #007BFF;
+    color: white;
+}
+
+body.light-theme #comic-container {
+    background: #fff;
+    color: #333;
+}
+
+body.light-theme #comic-content button {
+    background: #FF6347;
+    color: white;
+}
