@@ -24,3 +24,6 @@ jobs:
         with:
           folder: .
           branch: main
+          clean-exclude: |
+            dist/*.js
+            dist/*.txt
