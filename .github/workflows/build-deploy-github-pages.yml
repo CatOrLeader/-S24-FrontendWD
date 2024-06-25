@@ -24,6 +24,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           folder: dist
+          target-folder: dist
           clean-exclude: |
             index.html
             comic.html
