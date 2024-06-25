@@ -22,6 +22,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.6.1
         with:
-          folder: dist
+          folder: .
+          target-folder: deploy
           branch: main
           clean: false
