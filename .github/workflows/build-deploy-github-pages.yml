@@ -19,18 +19,8 @@ jobs:
           npm install
           npm run build
 
-      - name: Mock .gitignore
-        run: |
-          mv .gitignore temp
-          mv gitignore_github_pages .gitignore
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.6.1
-        with:
-          folder: .
-          branch: main
-
-      - name: Repair .gitignore
-        run: |
-          mv .gitignore gitignore_github_pages
-          mv temp .gitignore
+#      - name: Deploy 🚀
+#        uses: JamesIves/github-pages-deploy-action@v4.6.1
+#        with:
+#          folder: .
+#          branch: main
