@@ -20,7 +20,7 @@ jobs:
         run: npm run build
 
       - name: GitHub Pages Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v4.6.1
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           folder: dist
