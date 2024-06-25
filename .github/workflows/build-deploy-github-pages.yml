@@ -29,6 +29,7 @@ jobs:
           folder: .
           target-folder: deploy
           branch: main
+          clean: false
 
       - name: Rename GitIgnore to default
         run: |
