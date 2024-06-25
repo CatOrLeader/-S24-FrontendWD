@@ -25,4 +25,3 @@ jobs:
           folder: .
           target-folder: deploy
           branch: main
-          clean: false
