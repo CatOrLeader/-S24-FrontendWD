@@ -26,18 +26,4 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist
           target-folder: dist
-          clean: clean
-
-      - name: Install
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: GitHub Pages Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: gh-pages
-          FOLDER: .
           clean: false
