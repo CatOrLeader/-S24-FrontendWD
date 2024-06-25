@@ -11,16 +11,21 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install & Build 🔧
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install dependencies and build
         run: |
           npm ci
           npm run build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.6.1
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: .
-          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
