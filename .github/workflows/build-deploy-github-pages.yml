@@ -19,9 +19,17 @@ jobs:
           npm install
           npm run build
 
+      - name: Rename GitIgnore
+        run: |
+          mv .gitignore temporary_name
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.6.1
         with:
           folder: .
           target-folder: deploy
           branch: main
+
+      - name: Rename GitIgnore to default
+        run: |
+          mv temporary_name .gitignore
