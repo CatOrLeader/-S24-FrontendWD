@@ -25,5 +25,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages
           FOLDER: dist
-          target-folder: dist
+          target-folder: temp
           clean: false
