@@ -24,7 +24,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           folder: dist
-          target-folder: dist
+#          target-folder: dist
           clean-exclude: |
             assets/*
             index.html
