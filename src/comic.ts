@@ -7,25 +7,25 @@ import moment from 'moment';
 import {changeColor} from "./common";
 
 document.addEventListener('DOMContentLoaded', function () {
-    let email: string = 'a.mukhutdinov@innopolis.university';
+    const email: string = 'a.mukhutdinov@innopolis.university';
 
     fetch(`https://fwd.innopolis.university/api/hw2?email=${encodeURIComponent(email)}`)
         .then((response: Response) => (<PromiseLike<string> | string>response.json()))
         .then(comicId => fetch(`https://fwd.innopolis.university/api/comic?id=${comicId}`))
         .then((response: Response) => (<PromiseLike<Comic> | Comic>response.json()))
         .then(comic => {
-            let comicTitle: HTMLHeadingElement = document.createElement('h3');
+            const comicTitle: HTMLHeadingElement = document.createElement('h3');
             comicTitle.textContent = comic.safe_title;
 
-            let comicDate: HTMLParagraphElement = document.createElement('p');
-            let date: Date = new Date(Number(comic.year), Number(comic.month) - 1, Number(comic.day));
+            const comicDate: HTMLParagraphElement = document.createElement('p');
+            const date: Date = new Date(Number(comic.year), Number(comic.month) - 1, Number(comic.day));
             comicDate.textContent = `Published on: ${date.toLocaleDateString()} (${moment(date).fromNow()})`;
 
-            let comicPicture: HTMLImageElement = document.createElement('img');
+            const comicPicture: HTMLImageElement = document.createElement('img');
             comicPicture.setAttribute('src', comic.img);
             comicPicture.setAttribute('alt', comic.alt);
 
-            let comicContainer: HTMLElement | null = document.getElementById('comic-container');
+            const comicContainer: HTMLElement | null = document.getElementById('comic-container');
 
             if (comicContainer) {
                 comicContainer.appendChild(comicTitle);
@@ -41,9 +41,9 @@ document.getElementById('back-to-main-btn')?.addEventListener('click', function 
 });
 
 document.getElementById('change-theme-btn')?.addEventListener('click', function () {
-    let body = document.body as HTMLElement;
-    let comicContent = document.querySelector('#comic-content') as HTMLElement;
-    let backButton = document.querySelector('#back-to-main-btn') as HTMLElement;
+    const body = document.body as HTMLElement;
+    const comicContent = document.querySelector('#comic-content') as HTMLElement;
+    const backButton = document.querySelector('#back-to-main-btn') as HTMLElement;
 
     if (body.style.backgroundColor === 'black') {
         changeColor(body, 'black', 'white');

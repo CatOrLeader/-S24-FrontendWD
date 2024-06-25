@@ -5,11 +5,11 @@ import "./common";
 import {changeColor} from "./common";
 
 document.getElementById('change-theme-btn')?.addEventListener('click', function () {
-    let body = document.body as HTMLElement;
-    let bio = document.querySelector('.bio') as HTMLElement;
-    let projects = document.querySelector('.projects') as HTMLElement;
-    let projectCards = document.querySelectorAll('.project-card') as NodeListOf<HTMLElement>;
-    let socialLinks = document.querySelector('.social-links') as HTMLElement;
+    const body = document.body as HTMLElement;
+    const bio = document.querySelector('.bio') as HTMLElement;
+    const projects = document.querySelector('.projects') as HTMLElement;
+    const projectCards = document.querySelectorAll('.project-card') as NodeListOf<HTMLElement>;
+    const socialLinks = document.querySelector('.social-links') as HTMLElement;
 
     if (body.style.backgroundColor === 'black') {
         changeColor(body, 'black', 'white');
