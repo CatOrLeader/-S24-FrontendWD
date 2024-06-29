@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/-S24-FrontendWD/static/css/main.9f8ae8d7.css",
+    "main.js": "/-S24-FrontendWD/static/js/main.60e8278b.js",
+    "index.html": "/-S24-FrontendWD/index.html",
+    "main.9f8ae8d7.css.map": "/-S24-FrontendWD/static/css/main.9f8ae8d7.css.map",
+    "main.60e8278b.js.map": "/-S24-FrontendWD/static/js/main.60e8278b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f8ae8d7.css",
+    "static/js/main.60e8278b.js"
+  ]
+}
