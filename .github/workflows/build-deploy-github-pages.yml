@@ -1,32 +1,38 @@
-name: Build & Deploy
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
+
 permissions:
   contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Source Code
+        uses: actions/checkout@v3
 
-      - name: Install
-        run: npm ci
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: '20'
 
-      - name: Build
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Lint Code
+        run: npm run lint
+
+      - name: Build React App
         run: npm run build
 
-      - name: GitHub Pages Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.6.1
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          folder: dist
-          target-folder: dist
-          clean-exclude: |
-            assets/*
-            index.html
-            comic.html
-            style.css
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
