@@ -11,6 +11,16 @@ const nextConfig = {
       },
     ],
   },
+  trailingSlash: true,
+  exportPathMap: async function(
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId },
+  ) {
+    return {
+      '/': { page: '/' },
+    };
+  },
+  output: 'export',
 };
 
 export default nextConfig;
