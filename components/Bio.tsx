@@ -13,7 +13,7 @@ const Bio: React.FC = () => (
         alt="Me"
       />
       <p>
-        Hi, I`m Mukhutdinov Artur, and I`m mostly a backend developer with a lot
+        Hi, I`m Mukhutdinov Artur, and I am mostly a backend developer with a lot
         of pet projects in my pocket. Now my interests are dedicated to frontend
         development (HTML, CSS, JS/TS, and UX/UI).
       </p>
