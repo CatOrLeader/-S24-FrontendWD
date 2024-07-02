@@ -1,13 +1,14 @@
 'use strict';
 
 import React, { useEffect, useState } from 'react';
-import { Comic as ComicType } from '../types';
 import moment from 'moment';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
+import { Comic as ComicType } from '../src/types';
+import Image from 'next/image';
 
 const Comic: React.FC = () => {
   const [comic, setComic] = useState<ComicType | null>(null);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     const email = 'a.mukhutdinov@innopolis.university';
@@ -40,9 +41,9 @@ const Comic: React.FC = () => {
         <p>
           Published on: {date.toLocaleDateString()} ({timeSinceReleased})
         </p>
-        <img src={comic.img} alt={comic.alt} />
+        <Image src={comic.img} alt={comic.alt} />
       </div>
-      <button onClick={() => navigate('/')}>Back to Reality</button>
+      <button onClick={() => router.push('/')}>Back to Reality</button>
     </section>
   );
 };
