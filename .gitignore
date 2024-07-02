@@ -1,5 +1,6 @@
 dist/
 build/
+.next/
 
 *.js
 *.js.map

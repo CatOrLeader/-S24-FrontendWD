@@ -1,13 +1,15 @@
 'use strict';
 
 import React from 'react';
+import Image from 'next/image';
+import my_photo from "../public/images/me.jpg"
 
 const Bio: React.FC = () => (
   <div className="bio">
     <h2>Briefly about me</h2>
     <div className="bio-content">
-      <img
-        src="https://iimg.su/s/29/BRKU5pbjFlmHg8dXSDKf8FoKG8iMdsL0h5jnhaQ2.jpg"
+      <Image
+        src={my_photo}
         alt="Me"
       />
       <p>
