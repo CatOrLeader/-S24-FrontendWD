@@ -1,269 +1,274 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    transition: background-color 0.3s ease,
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition:
+    background-color 0.3s ease,
     color 0.3s ease;
 }
 
 body.light-theme {
-    background-color: #f4f4f4;
-    color: #333;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 body.dark-theme {
-    background-color: #1e1e1e;
-    color: #ccc;
+  background-color: #1e1e1e;
+  color: #ccc;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    position: relative;
-    z-index: 10;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
 }
 
 header button {
-    padding: 10px 20px;
-    background: #007bff;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  background: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: background-color 0.3s ease;
 }
 
 header button:hover {
-    background: #0056b3;
+  background: #0056b3;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    z-index: 10;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
 }
 
 .bio,
 .projects,
 #comic-container {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease,
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
     color 0.3s ease;
-    text-align: center;
+  text-align: center;
 }
 
 .bio-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bio-content img {
-    border-radius: 50%;
-    margin-right: 20px;
-    width: 150px;
-    height: 150px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease,
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
     color 0.3s ease;
-    cursor: pointer;
-    text-align: left;
+  cursor: pointer;
+  text-align: left;
 }
 
 .project-card:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .project-card a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #007bff;
-    transition: color 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
 }
 
 .project-card a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    pointer-events: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 #comic-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
 }
 
 #comic-content button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #ff6347;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease,
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff6347;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s ease,
     color 0.3s ease;
 }
 
 #comic-content button:hover {
-    background: #ff4500;
+  background: #ff4500;
 }
 
 /* Base styles for the footer */
 footer {
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 100;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 100;
 }
 
 .footer-header {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 footer .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* Styles for the dark theme */
 body.dark-theme footer {
-    background: #1e1e1e; /* Dark theme footer background */
-    color: #ccc; /* Light text for contrast */
+  background: #1e1e1e; /* Dark theme footer background */
+  color: #ccc; /* Light text for contrast */
 }
 
 body.dark-theme footer .social-links a {
-    color: #ccc; /* Ensure link text color adapts to dark theme */
-    transition: transform 0.3s ease;
+  color: #ccc; /* Ensure link text color adapts to dark theme */
+  transition: transform 0.3s ease;
 }
 
 body.dark-theme footer .social-links a:hover {
-    transform: scale(1.1); /* Slightly enlarge links on hover */
+  transform: scale(1.1); /* Slightly enlarge links on hover */
 }
 
 /* Styles for the light theme */
 body.light-theme footer {
-    background: #f4f4f4; /* Light theme footer background */
-    color: #333; /* Dark text for contrast */
+  background: #f4f4f4; /* Light theme footer background */
+  color: #333; /* Dark text for contrast */
 }
 
 body.light-theme footer .social-links a {
-    color: #333; /* Ensure link text color adapts to light theme */
-    transition: transform 0.3s ease;
+  color: #333; /* Ensure link text color adapts to light theme */
+  transition: transform 0.3s ease;
 }
 
 body.light-theme footer .social-links a:hover {
-    transform: scale(1.1); /* Slightly enlarge links on hover */
+  transform: scale(1.1); /* Slightly enlarge links on hover */
 }
 
 /* Adjust the size of the images if necessary */
 footer .social-links img {
-    width: 30px;
-    height: auto;
+  width: 30px;
+  height: auto;
 }
 
 .xkcd-comic-btn {
-    text-align: center;
-    margin: 20px 0;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .xkcd-comic-btn .comic-btn {
-    padding: 15px 30px;
-    background: linear-gradient(45deg, #007bff, #00ff7f);
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 50px;
-    font-size: 18px;
-    transition: background-color 0.3s ease,
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #007bff, #00ff7f);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 18px;
+  transition:
+    background-color 0.3s ease,
     transform 0.3s ease;
 }
 
 .xkcd-comic-btn .comic-btn:hover {
-    background: linear-gradient(45deg, #0056b3, #007b55);
-    transform: scale(1.05);
+  background: linear-gradient(45deg, #0056b3, #007b55);
+  transform: scale(1.05);
 }
 
 /* Theme-specific styles for other sections */
 body.dark-theme .bio,
 body.dark-theme .projects,
 body.dark-theme #comic-container {
-    background: #2c2c2c;
-    color: #ccc;
+  background: #2c2c2c;
+  color: #ccc;
 }
 
 body.dark-theme .project-card,
 body.dark-theme .project-card:hover {
-    background-color: #3c3c3c;
+  background-color: #3c3c3c;
 }
 
 body.dark-theme .project-card a {
-    color: #90caf9;
+  color: #90caf9;
 }
 
 body.dark-theme .project-card a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 body.dark-theme #comic-content button {
-    background: #007bff;
-    color: white;
+  background: #007bff;
+  color: white;
 }
 
 body.light-theme .bio,
 body.light-theme .projects,
 body.light-theme #comic-container {
-    background: #fff;
-    color: #333;
+  background: #fff;
+  color: #333;
 }
 
 body.light-theme .project-card,
 body.light-theme .project-card:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 body.light-theme .project-card a {
-    color: #007bff;
+  color: #007bff;
 }
 
 body.light-theme .project-card a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 body.light-theme #comic-content button {
-    background: #ff6347;
-    color: white;
+  background: #ff6347;
+  color: white;
 }
