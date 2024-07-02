@@ -22,6 +22,8 @@ const nextConfig = {
     };
   },
   output: 'export',
+  basePath: '/-S24-FrontendWD',
+  assetPrefix: '/-S24-FrontendWD/'
 };
 
 export default nextConfig;
